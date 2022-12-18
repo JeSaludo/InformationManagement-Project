@@ -1,73 +1,197 @@
-<?php
+<?php  
+  include_once 'header.php';
 
-    include_once('db_connection.php');
-  
-
-    if(!$conn){
-        echo("Connection failed");
-    }
-   
-    //rpoblem with signin
-   
-    if (isset($_POST['username'])){
-        $username = "admin"; //make it sql 
-        $password = "admin12345";
-
-        $query= "SELECT * FROM customer WHERE customer_name='$username'AND customer_password='$password'";
-        $result = mysqli_query($conn,$query);
-        $row=mysqli_fetch_array($result, MYSQLI_ASSOC);
-        $count=mysqli_num_rows($result);
-        
-        if($count==1){
-        echo"<h1><center>Login successful</center></h1>";
-        }
-        else{
-        echo "<h1> Loginfailed. Invalid username orpassword.</h1>";
-    }
-        
-}
-    
-    
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanMing Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">
-</head>
-<body>
-    
-    <div class="container">
-        <h1 class="logo">WANMING<span>万民堂</span></h1>
+<section id="hero-section">
+      <div class="glass-wrapper">
+        <h1 class="hero-header">BEST CHINESE FOOD FOR YOUR TASTE</h1>
+        <p class="hero-subheader">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ullamcorper a lacus vestibulum sed arcu.
+          At tellus at urna condimentum mattis pellentesque id.</p>
+        <a href="#menu-section"><button class="hero-btn">View More</button></a>
+      </div>
+ 
+  </section>
+  <div class="box"> </div>
+  <section id="menu-section">
+    <h1 class="menu-header">Our Menu</h1>
 
+    <div class="menu-grid">
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
 
-        <div class="box-wrapper">
-            <div class="hero-content">
-                <h1 class="hero-header">LOG IN</h1>
-                <h2 class="hero-welcome">WELCOME BACK!</h2>
-                <h2 class="hero-text">Please enter your details</h2>
-                <form method="POST" class="form-container" action="#">
-                    <label for="username">
-                    User ID :
-                    </label><input type="text" name="username" id="username" maxlength="100" size="20"/>
-                    <label>
-                    Password :</label> <input name="password" type="password" id="password" maxlength="8" size="20"/>
-                    <input type="submit"/>
-                    </form>
-            </div>
-            
+          </div>
+
         </div>
+      </div>
 
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
 
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <div class="card-content">
+          <h1 class="card-header">
+            Food name
+          </h1>
+          <div class="card-body">
+            <h1 class="card-price">500php</h1>
+            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
+          </div>
+          <div class="card-footer">
+            <button class="card-btn">ORDER</button>
+
+          </div>
+
+        </div>
+      </div>
     </div>
-</body>
-</html>
+  </section>
+  
+  <?php
+    include_once 'footer.php';
+  ?>
