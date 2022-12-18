@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Noto Sans', sans-serif;
+   
+}
+
+.container{
+    width:1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header{    
+    background-color:#060C16;
+
+   
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--ff-primary);
+}
+.nav-logo{
+    color: white;
+    margin:30px 70px 30px ;
+    font-size: 40px;
+}
+.nav-link{
+    list-style-type: none;
+    margin-right:60px;
+   
+}
+.nav-item > a
+{   
+    font-size: 19px;
+    text-decoration: none;
+    color:white;
+    font-size: 24px;
+    
+}
+
+.nav-item > a:hover{
+    cursor: pointer;
+    color: red;
+
+}
+
+
+
+.nav-item{
+    display: inline-block;   
+    margin:30px 20px;
+
+}
+
+.nav-logo span{
+    color:red;
+}
+
+#hero-section{
+    
+    background-image: url(../images/hero-img.png);
+    width: 1440px;
+    height: 861px;
+    background-size: cover;
+}
+
+.glass-wrapper{
+    width: 773px;
+    height: 608px;   
+    position: absolute;
+    left: 80px;
+    top: 200px;
+    background: linear-gradient(100.05deg, rgba(0, 29, 45, 0.69) 4.21%, rgba(1, 12, 30, 0.9) 100%);
+    border: 1px solid #FFFFFF;
+    backdrop-filter: blur(7.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 30px;
+}
+
+.hero-header{
+    margin: 70px 50px;
+    width: 70%;
+}
+
+#hero-section h1{
+    font-family: var(--ff-secondary);
+    font-size: 42px;
+    color:white;
+}
+
+#hero-section p{
+    font-family: var(--ff-secondary);
+    font-size: 22px;
+    color:white;
+}
+.hero-subheader{
+    width:80%;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    text-align: justify;
+    margin: 70px 50px;
+}
+
+
+.hero-btn{
+    margin: 0 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px 40px 0px 40px;
+    background-color: transparent;
+    color: white;
+    width: 291px;
+    height: 81px;
+    font-size: 32px;
+}
+
+
+.hero-btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    
+
+}
+
+.hero-btn:active{
+    width: 291px;
+    height: 81px;
+}
+
+.box{
+    background: #011221;
+    width: 1440px;
+    height: 28px;
+    margin: 0 auto;
+}
+
+.menu-header{
+    text-align: center;
+    margin: 50px auto 70px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    text-decoration: underline;
+    color:#F00A0A;
+    text-decoration-thickness: 10%;
+}
+
+
+
+.card
+{
+    width: 408px;
+    height: 429px;
+
+    
+    background: #FFF8EE;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    
+}
+
+.card-image{
+    width: 381px;
+    height: 250px;  
+    margin: 12px;
+}
+
+#menu-section h1,h2{
+    font-family: var(--ff-primary);
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1320px;
+    margin: 0 auto 100px;
+    gap:40px
+}
+.card-header{
+    margin-left: 20px;
+    color: #F00A0A;
+    font-size: 22px;
+}
+
+.card-price{
+    margin-left: 20px;
+    color: #0E2E53;
+    font-size: 18px;
+    width: 60%;
+}
+
+.card-rating{
+   margin-right: 30px;
+}
+
+.card-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-btn{
+    width: 169px;
+    height: 45px;
+   
+    margin: 20px 20px ;
+    border: 1px solid #000000;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 20px 20px 0px 20px;
+}
+
+#footer-section{
+    width: 1440px;
+    height: 218px;
+    margin: 0 auto;
+    background: #000000
+}
+
+.penguin{
+    margin: 0 auto -21px;
+    text-align: center;
+}
+
+.footer-logo{
+    width: 362px;
+    height: 51px;
+    padding: 30px 0;
+    margin: 0 auto;
+  
+    font-family: var(--ff-primary);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 51px;
+
+
+    text-align: center;
+
+   color: white;
+   
+    
+}
+
+.footer-text{
+    color:white;
+    width:50%;
+    text-align: center;
+    font-size: 24px;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+
+
+
