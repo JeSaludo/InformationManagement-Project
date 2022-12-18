@@ -5,8 +5,8 @@ $dBUserName = "root";
 $dBPassword = "";
 $dBName = "food_order_db";
 
-$conn =mysqli_connect($serverName, $dBUserName,$dBPassword,$dBName);
+$conn = mysqli_connect($serverName, $dBUserName,$dBPassword,$dBName);
 
 if(!$conn){
-    die("Connectin Failed: " .   mysqli_connect_error());
+    die("Connection Failed: " .   mysqli_connect_error());
 }
