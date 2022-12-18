@@ -1,8 +1,8 @@
 <?php
    
-    function emptyInputSignup($name,  $email, $username, $pwd, $pwdRepeat){
+    function emptyInputSignup($name,  $email, $username, $pwd, $pwdRepeat, $phone, $address){
         $result = null;
-        if(empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat)){
+        if(empty($name) || empty($email) || empty($username) || empty($pwd) || empty($pwdRepeat) || empty($phone) || empty($address)){
             $result = true;
         }
         else{
@@ -68,8 +68,8 @@
         mysqli_stmt_close($stmt);
     }
     
-    function createUser($conn,$name,  $email, $username, $pwd){
-        $sql = "INSERT INTO users (usersName, usersEmail,usersUid,usersPwd) VALUES (?,?,?,?);";
+    function createUser($conn,$name,  $email, $username, $pwd,$phone, $address){
+        $sql = "INSERT INTO users (usersName, usersEmail,usersUid,usersPwd,usersPhone,usersAddress) VALUES (?,?,?,?,?,?);";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt,$sql)){
             header("location: ../signup.php?error=stmtfailed");
@@ -77,7 +77,7 @@
         }
     
         $hashedPwd = password_hash($pwd,PASSWORD_DEFAULT);
-        mysqli_stmt_bind_param($stmt, "ssss",$name, $email,$username,$hashedPwd);
+        mysqli_stmt_bind_param($stmt, "ssssss",$name, $email,$username,$hashedPwd,$phone,$address);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
         header("location: ../signup.php?error=none");
@@ -120,3 +120,6 @@
         exit();
         }
     }
+
+    
+    

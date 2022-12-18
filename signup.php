@@ -9,6 +9,8 @@
         <input type="text" name="name" placeholder="Full name...">
         <input type="text" name="email" placeholder="Email...">
         <input type="text" name="uid" placeholder="Username...">
+        <input type="text" name="phone" placeholder="Phone Number...">
+        <input type="text" name="address" placeholder="Address...">
         <input type="password" name="pwd" placeholder="Password...">
         <input type="password" name="pwdrepeat" placeholder="Repeat Password...">
         <button type="submit" name="submit">Sign Up</button>
@@ -36,7 +38,11 @@
             }
             else if($_GET["error"] == "none"){
                 echo '<p class="error">You have signed up!<p/>';
-            }
+            }                
+            else if($_GET["error"] == "phoneinvalid"){
+                echo '<p class="error">Invalid Phone Number!<p/>';
+            }                
+            
         }
         ?></div>
         
