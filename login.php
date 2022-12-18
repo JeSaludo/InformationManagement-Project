@@ -4,8 +4,8 @@
 ?>
    
   
-    <section id="login-form">
-        <h2 class="login-header">Log In</h2>
+    <section id="signup-form">
+        <h2 class="signup-header">Log In</h2>
         <form action="include/login.inc.php" method="post">    
         <input type="text" name="uid" placeholder="Username/Email...">
         <input type="password" name="pwd" placeholder="Password...">       

@@ -40,7 +40,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
         if(isset($_SESSION["useruid"])){      
            
             echo '<li class="nav-item"><a href="profile.php">PROFILE</a></li> ';
-            echo '<li class="nav-item"><a href="include/logout.php">LOG OUT</a></li> ';   
+            echo '<li class="nav-item"><a href="include/logout.inc.php">LOG OUT</a></li> ';   
             
         }
         else{

@@ -296,24 +296,7 @@ header{
    
 
 /* Signup PAGE */
-#login-form{
-    margin-bottom: 200px;
-    
-  }
-  #login-form h2{
-      text-align: center;
-      margin: 0 auto;
-  }
-  #login-form input{
-      display: block;
-      margin: 10px auto;
-  }
-  
-  #login-form button{
-      display: block;
-      margin: 0 auto;
-      
-  }
+
 /* About us PAGE */
 
 
