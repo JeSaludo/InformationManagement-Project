@@ -306,7 +306,12 @@ header{
     font-family: var(--ff-secondary);
     display: block;
 }
-   
+
+
+#cart-section{
+   color: red;
+   margin: 100px 100px 200px;
+}
 
 /* Signup PAGE */
 

@@ -192,6 +192,11 @@
     </div>
   </section>
   
+  <section id="cart-section">
+  <h1>Cart</h1>
+  </section>
+
+
   <?php
     include_once 'footer.php';
   ?>
