@@ -11,6 +11,7 @@ if(!$conn){
     die("Connection Failed: " .   mysqli_connect_error());
 }
 
+
 if(isset($_GET["id"])){
 
     $food_id = $_GET["id"];
@@ -47,4 +48,5 @@ if (isset($_GET["cart_id"])) {
 
    
 }
+
 

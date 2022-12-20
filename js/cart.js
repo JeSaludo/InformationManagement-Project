@@ -13,7 +13,7 @@ for(var i = 0; i < remove.length; i++){
         xml.open("GET", "include/dbh.inc.php?cart_id="+cart_id,true);
         xml.send();
     })
-}
+
     
 
-
+}

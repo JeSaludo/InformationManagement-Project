@@ -14,14 +14,16 @@
       </div>
  
   </section>
+
   <div class="box"> </div>
   <section id="menu-section">
     <h1 class="menu-header">Our Menu</h1>
-
+   
     <div class="menu-grid">
       
       <?php
-      $sql = "SELECT * FROM foods;";
+      
+      $sql = "SELECT * FROM foods;";//select all from database
       $result = mysqli_query($conn, $sql);
       $resultCheck = mysqli_num_rows($result);
 
