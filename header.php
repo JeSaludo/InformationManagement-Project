@@ -1,5 +1,6 @@
 <?php
     session_start();
+    
 ?>
 
 <!DOCTYPE html>
@@ -32,20 +33,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <nav class="navbar">
     <h1 class="nav-logo">WANMING<span>万民堂</span></h1>
     <ul class="nav-link">
-    <li class="nav-item"><a href="index.php">HOME</a></li>
-    <li class="nav-item"><a href="#">CART</a></li>
-    <li class="nav-item"><a href="#">ABOUT US</a></li>    
-    
+    <li class="nav-item"><a class="nav-item--a" href="index.php">HOME</a></li>
+    <li class="nav-item"><a class="nav-item--a" href="include/cart.inc.php">CART</a></li>
+    <li class="nav-item"><a class="nav-item--a" href="#">ABOUT US</a></li>    
+   
     <?php            
         if(isset($_SESSION["useruid"])){      
            
-            echo '<li class="nav-item"><a href="profile.php">PROFILE</a></li> ';
-            echo '<li class="nav-item"><a href="include/logout.inc.php">LOG OUT</a></li> ';   
+            echo '<li class="nav-item"><a class="nav-item--a" href="#">PROFILE</a></li> ';
+            echo '<li class="nav-item"><a class="nav-item--a" href="include/logout.inc.php">LOG OUT</a></li> ';   
             
         }
         else{
-            echo' <li class="nav-item"><a href="signup.php">SIGN IN</a></li>';
-            echo ' <li class="nav-item"><a href="login.php">LOG IN</a></li> ';  
+            echo' <li class="nav-item"><a class="nav-item--a" href="signup.php">SIGN IN</a></li>';
+            echo ' <li class="nav-item"><a class="nav-item--a" href="login.php">LOG IN</a></li> ';  
         }
         
     ?>

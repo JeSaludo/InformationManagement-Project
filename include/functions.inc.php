@@ -115,7 +115,7 @@
             session_start();
             $_SESSION["userid"] = $uidExists["usersID"];
             $_SESSION["useruid"] = $uidExists["usersUid"];
-            
+            $_SESSION['isLogIn'] = true;
             header("location: ../index.php");
         exit();
         }

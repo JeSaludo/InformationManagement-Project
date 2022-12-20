@@ -1,6 +1,6 @@
 <?php  
   include_once 'header.php';
-
+  include_once 'include/dbh.inc.php';
 ?>
 
 <section id="hero-section">
@@ -19,182 +19,46 @@
     <h1 class="menu-header">Our Menu</h1>
 
     <div class="menu-grid">
+      
+      <?php
+      $sql = "SELECT * FROM foods;";
+      $result = mysqli_query($conn, $sql);
+      $resultCheck = mysqli_num_rows($result);
+
+      if ($resultCheck > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+
+      ?>
       <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
+        <img src="<?php echo $row['food_image']?>" alt="" class="card-image">
         <div class="card-content">
           <h1 class="card-header">
-            Food name
+            <?php echo $row['food_name'];?>
           </h1>
           <div class="card-body">
-            <h1 class="card-price">500php</h1>
+            <h1 class="card-price"><?php echo $row['food_price'];?>PHP</h1>
             <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                 class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
           </div>
           <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
+            <button class="card-btn add" data-id="<?php echo $row["food_id"];?>">Add to cart</button>
           </div>
 
         </div>
       </div>
 
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
 
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="./images/peking-duck.png" alt="" class="card-image">
-        <div class="card-content">
-          <h1 class="card-header">
-            Food name
-          </h1>
-          <div class="card-body">
-            <h1 class="card-price">500php</h1>
-            <a class="card-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></a>
-          </div>
-          <div class="card-footer">
-            <button class="card-btn">ORDER</button>
-
-          </div>
-
-        </div>
-      </div>
+      <?php
+        }
+      }
+      ?>
     </div>
+
+     
   </section>
   
-  <section id="cart-section">
-  <h1>Cart</h1>
-  </section>
+   <script src="js/script.js">
+    </script>
 
 
   <?php

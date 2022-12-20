@@ -6,6 +6,8 @@
    </h1>
    <p class="footer-text">The largest restaurant. Authenthic and truly unique digital creation. Signed and issued by the creator, made possible by blockchain technology.</p>
   </section>
+
+   
   </div>
 </body>
 

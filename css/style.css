@@ -19,13 +19,14 @@
 
 header{    
     background-color:#060C16;
-
+   
    
 }
 .navbar{
     display: flex;
     justify-content: space-between;
     font-family: var(--ff-primary);
+   
 }
 .nav-logo{
     color: white;
@@ -37,20 +38,24 @@ header{
     margin-right:60px;
    
 }
-.nav-item > a
+.nav-item--a
 {   
     font-size: 19px;
     text-decoration: none;
     color:white;
     font-size: 24px;
-    
+    font-family: var(--ff-primary);
+    font-weight: 500;
 }
 
-.nav-item > a:hover{
+.nav-item--a:hover{
     cursor: pointer;
     color: red;
 
 }
+
+
+
 
 
 
@@ -308,11 +313,10 @@ header{
 }
 
 
-#cart-section{
-   color: red;
-   margin: 100px 100px 200px;
-}
 
+.nav-a{
+   color: #000;
+}
 /* Signup PAGE */
 
 /* About us PAGE */
@@ -320,3 +324,71 @@ header{
 
 
 /* cart PAGE */
+.cart-grid{
+   display: grid;
+   grid-auto-columns: 1fr;
+
+}
+
+.cart-card{
+    position: relative;
+    width: 1294px;
+    height: 266px;
+    margin:20px auto;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.cart-image{
+
+    width: 284px;
+    height: 211px;
+    margin:25px;
+}
+
+.cart-btn{
+    position: absolute;
+    background-color: lightcoral;
+    color: white;
+    padding: 50px 50px;
+    border: none;
+    cursor: pointer;
+    right: 80px;;
+    top: 50px;
+    
+}
+
+.cart-btn:hover{
+    background-color: lightpink;
+}
+
+.cart-btn:active{
+    background-color: rgb(148, 87, 96);
+}
+
+
+.cart-body{
+    position: absolute;
+    top: 90px;
+    left: 350px;
+}
+
+.cart-header, cart-price{
+    font-family: var(--ff-primary);
+    font-size: 36px;
+    margin: 0px 0px;
+    color: rgb(241, 99, 51);
+}
+.mycart{
+    text-align: center;
+    font-family: var(--ff-primary);
+    font-size: 40px;
+    margin: 20px 0 20px 0;
+    color: #36558F;
+}
+
+.cart-price{
+    font-family: var(--ff-secondary);
+    font-size: 25px;
+    color: #000;
+}
